@@ -17,7 +17,8 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0.2.0
         with:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
-          project_id: my-project-bigquery-api-001
+          project_id: seu_projeto_id
+          export_default_credentials: true  # Adicione esta linha
 
       - name: Build and deploy to Cloud Run
         run: |
